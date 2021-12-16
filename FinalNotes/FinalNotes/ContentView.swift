@@ -27,14 +27,14 @@ struct ContentView: View {
                         Text(Note.title)
                             .multilineTextAlignment(.leading)
                             .frame( maxWidth: .infinity, alignment: .leading)
-//                            .font(.title3)
+
                             .font(Font.title3.weight(.semibold))
                             .foregroundColor(Color(.label))
                             
 
                         
                         
-                        Text(Note.description)
+                        Text("\(Date.now.formatted(date: .numeric, time: .omitted))   \(Note.description)")
                             .multilineTextAlignment(.leading)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .font(.body)
